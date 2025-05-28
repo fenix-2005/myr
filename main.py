@@ -11,11 +11,14 @@ while True:
     if choice == 1:
         times = int(input("Ingrese cuantas notas va a calcular: "))
 
-        for i in times:
+        for i in range(times):
             print (f"Ingrese la nota {i+1}")
             note = int(input(""))
+            listn.append(note)
 
     elif choice == 2:
-        print
+        promedio = sum(listn) / len(listn)
+        print (f"Su promedio es de {promedio}")
+
     else:
         print ("Datos ingresados no validos por favor reintente")
